@@ -1,9 +1,10 @@
 ---
 home: true
-footer: GNU General Public License v3.0 | Copyright © 2021 CaaMoe | Page created by BecodReyes
+footer: Page created by BecodReyes
 ---
 
-![BStats](https://bstats.org/signatures/bukkit/MultiLoginR.svg)
+![MultiLogin](https://bstats.org/signatures/bungeecord/MultiLogin.svg)
+![MultiLoginR](https://bstats.org/signatures/bukkit/MultiLoginR.svg)
 
 # 功能
 

@@ -14,4 +14,14 @@ module.exports = {
     repo: "https://github.com/CaaMoe/MultiLogin",
     editLinks: false,
   },
+  configureWebpack: () => {
+    const NODE_ENV = process.env.NODE_ENV
+    if(NODE_ENV === 'production'){
+      return {
+        output: {
+          publicPath: 'https://cdn.jsdelivr.net/gh/BecodReyes/MultiLoginPage@gh-pages/'
+        }
+      }
+    }
+  }
 };
