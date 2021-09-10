@@ -3,7 +3,6 @@ home: true
 footer: Page created by BecodReyes
 ---
 
-![MultiLogin](https://bstats.org/signatures/bungeecord/MultiLogin.svg)
 ![MultiLoginR](https://bstats.org/signatures/bukkit/MultiLoginR.svg)
 
 # 功能
@@ -14,6 +13,7 @@ footer: Page created by BecodReyes
 * 阻止服务器出现同名账户
 * 防止出现抢注服务器内 ID 的情况
 * 账户安全保护机制
+* 支持 Bukkit, Bungee, Velocity, Fabric
 
 <br>
 
@@ -35,7 +35,7 @@ path 来判断是否允许登入。
 
 ## 安装
 
-与同类型程序相比，MultiLogin 不需要修改或添加任何服务端启动参数， 只需将适合服务端的插件本体丢入 plugins 文件夹下即可。
+与同类型程序相比，MultiLogin 不需要修改或添加任何服务端启动参数`（不需要安装任何 authlib-injector 以及同类型前置程序）`， 只需将适合服务端的插件本体丢入 plugins 文件夹下即可。
 
 ## 添加一个 Yggdrasil 账户验证服务器
 
@@ -122,19 +122,17 @@ path 来判断是否允许登入。
 ```yaml
       officialCustom:
         body:
-  	  
-  	      # 这是原版验证服务器 HasJoin 阶段向 Yggdrasil 账户验证服务器所请求的 URL
-  	      # 其中，变量 {0} 表示 username ，变量 {1} 表示 serverId ，变量 {2} 表示 passIpContent 节点所设置的内容
-  	      url: "https://sessionserver.mojang.com/session/minecraft/hasJoined?username={0}&serverId={1}{2}"
+              # 这是原版验证服务器 HasJoin 阶段向 Yggdrasil 账户验证服务器所请求的 URL
+              # 其中，变量 {0} 表示 username ，变量 {1} 表示 serverId ，变量 {2} 表示 passIpContent 节点所设置的内容
+              url: "https://sessionserver.mojang.com/session/minecraft/hasJoined?username={0}&serverId={1}{2}"
 ```
 * 添加 Blessing Skin 类型验证服务器
 ```yaml
       blessingSkinCustom:
         body:
-  	  
-  	      # 假如当前 Blessing Skin 的 Yggdrasil api 地址为 {0} ，则 url 值应该为 ‘{0}/sessionserver/session/minecraft/hasJoined?username={0}&serverId={1}{2}’
-  	      # 其中，变量 {0} 表示 username ，变量 {1} 表示 serverId ，变量 {2} 表示 passIpContent 节点所设置的内容
-  	      url: "{0}/sessionserver/session/minecraft/hasJoined?username={0}&serverId={1}{2}"
+              # 假如当前 Blessing Skin 的 Yggdrasil api 地址为 {0} ，则 url 值应该为 ‘{0}/sessionserver/session/minecraft/hasJoined?username={0}&serverId={1}{2}’
+              # 其中，变量 {0} 表示 username ，变量 {1} 表示 serverId ，变量 {2} 表示 passIpContent 节点所设置的内容
+              url: "{0}/sessionserver/session/minecraft/hasJoined?username={0}&serverId={1}{2}"
 ```
 
 <br>
