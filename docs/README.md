@@ -152,7 +152,7 @@ path 来判断是否允许登入。
 
 <br>
 
-# PlaceholderAPI 变量 (Bukkit Only)
+# PlaceholderAPI 变量 (仅限Bukkit)
 
 | 变量 | 简介 |
 | :-----| :----- |
