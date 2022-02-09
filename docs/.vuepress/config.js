@@ -9,7 +9,7 @@ module.exports = {
     '/': {
       lang: 'zh-CN',
       title: 'MultiLogin',
-      description: '支持多Yggdrasil的外置登入插件'
+      description: '多 Yggdrasil 共存的实现'
     },
     '/en/': {
       lang: 'en-US',
@@ -25,15 +25,27 @@ module.exports = {
     locales: {
       '/': {
         label: '简体中文',
-        selectText: '选择语言',
+        selectText: 'Languages',
         ariaLabel: '选择语言',
         lastUpdated: '上次更新',
+		nav: [
+		  {
+			text: '最新构建',
+			link: 'https://github.com/CaaMoe/MultiLogin/actions'
+		  }
+		]
       },
       '/en/': {
         label: 'English',
-        selectText: 'Languages',
+        selectText: '选择语言',
         ariaLabel: 'Select language',
         lastUpdated: 'Last Updated',
+		nav: [
+		  {
+			text: 'CI build download',
+			link: 'https://github.com/CaaMoe/MultiLogin/actions'
+		  }
+		]
       }
     }
   },
